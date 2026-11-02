@@ -1,0 +1,31 @@
+{
+  "data_file": "data/sample_spy.csv",
+  "output_dir": "output",
+  "initial_capital": 100000,
+
+  "position_sizing": {
+    "mode": "percent_of_equity",
+    "value": 95
+  },
+
+  "entry_rules": [
+    {
+      "type": "breakout",
+      "days": 20,
+      "basis": "high",
+      "comment": "enter when close breaks above the 20-day highest high"
+    }
+  ],
+
+  "exit_rules": {
+    "stop_loss_pct": 8,
+    "take_profit_pct": 15,
+    "trailing_stop_pct": 5,
+    "exit_on_opposite_signal": false,
+    "max_bars_in_trade": null,
+    "signal_rules": []
+  },
+
+  "commission_per_share": 0,
+  "slippage_pct": 0
+}
